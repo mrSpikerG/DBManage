@@ -1,0 +1,30 @@
+﻿<Window x:Class="DBManage.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:DBManage"
+        Background="{DynamicResource MaterialDesignPaper}"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBox Name="TextBox1" md:HintAssist.Hint="Server name" Text="{Binding Path=Server}" Style="{StaticResource MaterialDesignFloatingHintTextBox}" VerticalAlignment="Center" Margin="100 60 100 5"></TextBox>
+        <TextBox Name="TextBox2" md:HintAssist.Hint="Database name" Text="{Binding Path=Database}" Style="{StaticResource MaterialDesignFloatingHintTextBox}" VerticalAlignment="Center" Margin="100 5 100 60" Grid.Row="1"></TextBox>
+
+        <Button Style="{StaticResource MaterialDesignPaperDarkButton}" Grid.Row="2" Margin="100 0 100 0" Content="Подключится" Click="Button_Click" />
+    </Grid>
+
+
+
+</Window>
